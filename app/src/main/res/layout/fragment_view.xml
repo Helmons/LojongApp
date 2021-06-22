@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_grass"
+    tools:context=".ViewFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:isScrollContainer="false"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:verticalScrollbarPosition="defaultPosition">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewRoad1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/arvore1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_rv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/checkPointOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewRoad1"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewRoad1"
+                app:layout_constraintStart_toStartOf="@+id/imageViewRoad1">
+
+                <ImageView
+                    android:id="@+id/imageViewRoad2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_steph" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/elephant1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="elefante.json"
+                    app:lottie_loop="true" />
+
+                <Button
+                    android:id="@+id/step1"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageViewRoad3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/checkPointOne"
+                app:layout_constraintEnd_toEndOf="@id/checkPointOne"
+                app:layout_constraintStart_toStartOf="@id/checkPointOne"
+                app:srcCompat="@drawable/ic_c2" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewRoad3"
+                app:layout_constraintEnd_toStartOf="@id/imageViewRoad3"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad3"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_rh" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewRoad4"
+                app:layout_constraintEnd_toStartOf="@id/imageViewRoad4"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad4"
+                app:srcCompat="@drawable/ic_c4" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/checkPointTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewRoad5"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewRoad5"
+                app:layout_constraintStart_toStartOf="@+id/imageViewRoad5">
+
+                <ImageView
+                    android:id="@+id/imageViewRoad6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_steph" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/elephant2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="elefante.json"
+                    app:lottie_loop="true" />
+
+                <Button
+                    android:id="@+id/step2"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageViewRoad7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/checkPointTwo"
+                app:layout_constraintEnd_toEndOf="@id/checkPointTwo"
+                app:layout_constraintStart_toStartOf="@id/checkPointTwo"
+                app:srcCompat="@drawable/ic_c1" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewRoad7"
+                app:layout_constraintStart_toEndOf="@id/imageViewRoad7"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad7"
+                app:srcCompat="@drawable/ic_rh" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewRoad8"
+                app:layout_constraintStart_toEndOf="@id/imageViewRoad8"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad8"
+                app:srcCompat="@drawable/ic_rh" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewRoad9"
+                app:layout_constraintStart_toEndOf="@id/imageViewRoad9"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad9"
+                app:srcCompat="@drawable/ic_c3" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/imageViewRoad10"
+                app:layout_constraintEnd_toEndOf="@id/imageViewRoad10"
+                app:layout_constraintStart_toStartOf="@id/imageViewRoad10"
+                app:srcCompat="@drawable/ic_rv" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/imageViewRoad11"
+                app:layout_constraintEnd_toEndOf="@id/imageViewRoad11"
+                app:layout_constraintStart_toStartOf="@id/imageViewRoad11"
+                app:srcCompat="@drawable/ic_c2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/checkPointThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewRoad12"
+                app:layout_constraintEnd_toStartOf="@id/imageViewRoad12"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad12">
+
+                <ImageView
+                    android:id="@+id/imageViewRoad14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_stepv" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/elephant3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="elefante.json"
+                    app:lottie_loop="true" />
+
+                <Button
+                    android:id="@+id/step3"
+                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageViewRoad15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/checkPointThree"
+                app:layout_constraintEnd_toStartOf="@id/checkPointThree"
+                app:layout_constraintTop_toTopOf="@id/checkPointThree"
+                app:srcCompat="@drawable/ic_c4" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/imageViewRoad15"
+                app:layout_constraintEnd_toEndOf="@id/imageViewRoad15"
+                app:layout_constraintStart_toStartOf="@id/imageViewRoad15"
+                app:srcCompat="@drawable/ic_rv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/checkPointFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/imageViewRoad16"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewRoad16"
+                app:layout_constraintStart_toStartOf="@+id/imageViewRoad16">
+
+                <ImageView
+                    android:id="@+id/imageViewRoad17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_steph" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/elephant4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="elefante.json"
+                    app:lottie_loop="true" />
+
+                <Button
+                    android:id="@+id/step4"
+                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageViewRoad18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/checkPointFour"
+                app:layout_constraintEnd_toEndOf="@id/checkPointFour"
+                app:layout_constraintStart_toStartOf="@id/checkPointFour"
+                app:srcCompat="@drawable/ic_c2" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewRoad18"
+                app:layout_constraintEnd_toStartOf="@id/imageViewRoad18"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad18"
+                app:srcCompat="@drawable/ic_c4" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/checkPointFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/imageViewRoad19"
+                app:layout_constraintEnd_toEndOf="@id/imageViewRoad19"
+                app:layout_constraintStart_toStartOf="@id/imageViewRoad19">
+
+                <ImageView
+                    android:id="@+id/imageViewRoad20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_steph" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/elephant5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="elefante.json"
+                    app:lottie_loop="true" />
+
+                <Button
+                    android:id="@+id/step5"
+                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageViewRoad21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/checkPointFive"
+                app:layout_constraintEnd_toEndOf="@id/checkPointFive"
+                app:layout_constraintStart_toStartOf="@id/checkPointFive"
+                app:srcCompat="@drawable/ic_c1" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewRoad21"
+                app:layout_constraintStart_toEndOf="@id/imageViewRoad21"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad21"
+                app:srcCompat="@drawable/ic_rh" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewRoad22"
+                app:layout_constraintStart_toEndOf="@id/imageViewRoad22"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad22"
+                app:srcCompat="@drawable/ic_c3" />
+
+            <ImageView
+                android:id="@+id/imageViewRoad24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/imageViewRoad23"
+                app:layout_constraintEnd_toEndOf="@id/imageViewRoad23"
+                app:layout_constraintStart_toStartOf="@id/imageViewRoad23"
+                app:srcCompat="@drawable/ic_rv" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/arvore"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginEnd="1dp"
+                app:layout_constraintEnd_toStartOf="@id/imageViewRoad15"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad19"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="arvore.json"
+                app:lottie_loop="true"
+                app:lottie_speed="2" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/arvore1"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad4"
+                app:layout_constraintVertical_bias="1"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="arvore.json"
+                app:lottie_loop="true"
+                app:lottie_speed="2"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/arvore2"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="48dp"
+                app:layout_constraintBottom_toTopOf="@id/imageViewRoad12"
+                app:layout_constraintStart_toEndOf="@id/imageViewRoad22"
+                app:layout_constraintTop_toTopOf="@id/imageViewRoad23"
+                app:layout_constraintVertical_bias="0.544"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="arvore.json"
+                app:lottie_loop="true"
+                app:lottie_speed="2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
